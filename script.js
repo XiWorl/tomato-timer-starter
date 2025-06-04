@@ -26,6 +26,11 @@ function numberToTime(numInSeconds) {
     if (seconds < 10) {
         seconds = "0" + seconds
     } 
+
+    if (minutes < 0 && seconds < 0) {
+        return "Timer Finished!"
+    }
+
     return `${minutes}:${seconds}`
 }
 
